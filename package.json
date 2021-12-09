@@ -9,9 +9,9 @@
     "lint": "eslint . --ext=.ts --fix",
     "pretty": "prettier --write .",
     "clean": "del build",
-    "postinstall": "npm run build",
     "compile": "npm run lint && npm run clean && tsc",
     "build": "npm run compile",
+    "postpack": "npm run build",
     "prepublishOnly": "npm run build"
   },
   "author": "Vincenzo Calendini",
