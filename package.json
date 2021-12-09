@@ -2,7 +2,7 @@
   "name": "@adonisjs/state-machine",
   "version": "1.0.0",
   "description": "State machine for LUCID models",
-  "main": "build/providers/StateMachineProvider.ts",
+  "main": "build/index.js",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,6 +15,7 @@
   },
   "author": "Vincenzo Calendini",
   "typings": "./build/adonis-typings/index.d.ts",
+  "types": "./build/adonis-typings/index.d.ts",
   "files": [
     "build/src",
     "build/adonis-typings",
