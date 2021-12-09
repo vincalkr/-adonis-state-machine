@@ -1,0 +1,54 @@
+{
+  "name": "@adonisjs/state-machine",
+  "version": "1.0.0",
+  "description": "State machine for LUCID models",
+  "main": "build/providers/StateMachineProvider.ts",
+  "scripts": {
+    "mrm": "mrm --preset=@adonisjs/mrm-preset",
+    "typings": "./build/adonis-typings/index.d.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext=.ts --fix",
+    "pretty": "prettier --write .",
+    "clean": "del build",
+    "compile": "npm run lint && npm run clean && tsc",
+    "build": "npm run compile",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Vincenzo Calendini",
+  "files": [
+    "build/src",
+    "build/adonis-typings",
+    "build/providers",
+    "build/index.d.ts",
+    "build/index.js"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincalkr/adonis-state-machine.git"
+  },
+  "keywords": [
+    "Adonis",
+    "5",
+    "adonis-state-machine"
+  ],
+  "adonisjs": {
+    "types": "state-machine",
+    "providers": [
+      "state-machine"
+    ]
+  },
+  "devDependencies": {
+    "@adonisjs/core": "^5.4.2",
+    "@adonisjs/lucid": "^16.3.2",
+    "@adonisjs/mrm-preset": "^4.1.2",
+    "@adonisjs/require-ts": "^2.0.8",
+    "@types/node": "^16.11.12",
+    "del-cli": "^4.0.1",
+    "eslint": "^8.4.1",
+    "eslint-plugin-adonis": "^2.1.0",
+    "japa": "^4.0.0",
+    "mrm": "^3.0.10",
+    "typescript": "^4.5.2"
+  }
+}
