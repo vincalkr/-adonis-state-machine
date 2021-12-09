@@ -33,9 +33,9 @@
     "adonis-state-machine"
   ],
   "adonisjs": {
-    "types": "state-machine",
+    "types": "@adonis/state-machine",
     "providers": [
-      "state-machine"
+      "@adonis/state-machine"
     ]
   },
   "devDependencies": {
