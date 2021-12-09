@@ -1,5 +1,5 @@
 {
-  "name": "adonis-state-machine",
+  "name": "adonis5-state-machine",
   "version": "1.0.0",
   "description": "State machine for LUCID models",
   "main": "build/index.js",
@@ -35,9 +35,9 @@
     "adonis-state-machine"
   ],
   "adonisjs": {
-    "types": "adonis-state-machine",
+    "types": "adonis5-state-machine",
     "providers": [
-      "adonis/state-machine"
+      "adonis5-state-machine"
     ]
   },
   "devDependencies": {

@@ -3,11 +3,14 @@
   "compilerOptions": {
     "skipLibCheck": true,
     "noUnusedParameters": false,
-    "rootDir": ".",
+    "resolveJsonModule": true,
     "types": [
       "@types/node",
       "@adonisjs/core",
       "@adonisjs/lucid",
     ]
   },
+  "files": [
+    "./adonis-typings/index.ts"
+  ]
 }
