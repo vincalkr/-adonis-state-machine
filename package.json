@@ -5,7 +5,7 @@
   "main": "build/providers/StateMachineProvider.ts",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
-    "typings": "./build/adonis-typings/index.d.ts",
+    
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext=.ts --fix",
     "pretty": "prettier --write .",
@@ -15,6 +15,7 @@
     "prepublishOnly": "npm run build"
   },
   "author": "Vincenzo Calendini",
+  "typings": "./build/adonis-typings/index.d.ts",
   "files": [
     "build/src",
     "build/adonis-typings",
