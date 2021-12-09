@@ -1,4 +1,4 @@
-import { Event } from '.';
+import Event from '@ioc:Adonis/Addons/StateMachine/Event';
 
 class Status {
   public _id: string;

@@ -1,5 +1,8 @@
-declare module '@Adonis/Addons/StateMachine/Event' {
-  export interface EventContract {
+declare module '@ioc:Adonis/Addons/StateMachine/Event' {
+  interface EventContract {
     getData(): any;
   }
+
+  export { EventContract };
+  export default EventContract;
 }
