@@ -5,7 +5,6 @@
   "main": "build/providers/StateMachineProvider.ts",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
-    
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext=.ts --fix",
     "pretty": "prettier --write .",
