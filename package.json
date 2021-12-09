@@ -27,7 +27,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vincalkr/adonis-state-machine.git"
+    "url": "git+https://github.com/vincalkr/adonis5-state-machine.git"
   },
   "keywords": [
     "Adonis",
