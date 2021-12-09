@@ -21,6 +21,8 @@ declare module '@ioc:Adonis/Addons/StateMachine' {
     getStatus<T>(): StatusContract & T;
   }
 
+  const Machine: MachineContract;
+
   export { MachineContract };
-  export default MachineContract;
+  export default Machine;
 }
