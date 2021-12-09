@@ -9,7 +9,7 @@
     "lint": "eslint . --ext=.ts --fix",
     "pretty": "prettier --write .",
     "clean": "del build",
-    "prepare": "npm run build",
+    "preinstall": "npm run build",
     "compile": "npm run lint && npm run clean && tsc",
     "build": "npm run compile",
     "prepublishOnly": "npm run build"

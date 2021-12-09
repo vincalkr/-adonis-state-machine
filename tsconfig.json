@@ -9,8 +9,5 @@
       "@adonisjs/core",
       "@adonisjs/lucid",
     ]
-  },
-  "files": [
-    "./adonis-typings/index.ts"
-  ]
+  }
 }
