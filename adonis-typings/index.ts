@@ -4,3 +4,4 @@
 /// <reference path="./event.ts" />
 /// <reference path="./status.ts" />
 /// <reference path="./machine.ts" />
+/// <reference path="./exception.ts" />

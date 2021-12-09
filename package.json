@@ -1,7 +1,7 @@
 {
   "name": "adonis5-state-machine",
   "version": "1.0.0",
-  "description": "State machine for LUCID models",
+  "description": "State machine for AdonisJS 5.x",
   "main": "build/index.js",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
@@ -33,6 +33,9 @@
   "keywords": [
     "Adonis",
     "5",
+    "State",
+    "Status",
+    "Machina",
     "adonis-state-machine"
   ],
   "adonisjs": {

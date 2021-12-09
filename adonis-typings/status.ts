@@ -1,5 +1,5 @@
-declare module '@ioc:Adonis/Addons/StateMachine' {
-  export interface StatusContract {
+declare module '@ioc:Adonis/Addons/StateMachine/Status' {
+  interface StatusContract {
     $id(): string;
     $label(): string;
     id(): string;
@@ -12,4 +12,7 @@ declare module '@ioc:Adonis/Addons/StateMachine' {
     toJSON(): string;
     toString(): string;
   }
+
+  export { StatusContract };
+  export default StatusContract;
 }
