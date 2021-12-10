@@ -9,6 +9,5 @@
       "@adonisjs/core",
       "@adonisjs/lucid",
     ]
-  },
-  "include": ["*"],
+  }
 }
