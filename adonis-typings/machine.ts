@@ -1,7 +1,7 @@
 declare module '@ioc:Adonis/Addons/StateMachine' {
   import { StatusContract } from '@ioc:Adonis/Addons/StateMachine/Status';
   import { EventContract } from '@ioc:Adonis/Addons/StateMachine/Event';
-  import Machine from 'src/Machine';
+  import Machine from 'build/src/Machine';
 
   interface MachineContract {
     addState<T1>(
