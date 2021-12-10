@@ -1,7 +1,7 @@
 declare module '@ioc:Adonis/Addons/StateMachine' {
+  import { NormalizeConstructor } from '@ioc:Adonis/Core/Helpers';
   import { StatusContract } from '@ioc:Adonis/Addons/StateMachine/Status';
   import { EventContract } from '@ioc:Adonis/Addons/StateMachine/Event';
-  import Machine from 'build/src/Machine';
 
   interface MachineContract {
     addState<T1>(
@@ -23,6 +23,10 @@ declare module '@ioc:Adonis/Addons/StateMachine' {
   }
 
   export { MachineContract };
+
+  const Machine: <T extends NormalizeConstructor<import('@ioc:Adonis/Lucid/Orm').LucidModel>>(
+    superclass: T
+  ) => new (...args: any[]) => MachineContract;
 
   export default Machine;
 }
