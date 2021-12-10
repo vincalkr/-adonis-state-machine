@@ -153,7 +153,7 @@ const Machine = <T extends NormalizeConstructor<typeof BaseModel>>(superclass: T
       try {
         const status = require(`${join(
           process.cwd(),
-          `app/Models/Status/${this.$namespace}/${string.capitalCase(id.toString())}.ts`
+          `app/Models/Status/${this.$namespace}/${capitalize(id.toString())}.ts`
         )}`).default;
         return new status();
       } catch (error) {
