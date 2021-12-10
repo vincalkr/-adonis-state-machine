@@ -1,5 +1,4 @@
-import { EventContract } from '@ioc:Adonis/Addons/StateMachine/Event';
-class Event implements EventContract {
+class Event {
   public data: any;
 
   constructor({ data }) {
