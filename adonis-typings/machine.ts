@@ -23,5 +23,7 @@ declare module '@ioc:Adonis/Addons/StateMachine' {
 
   export { MachineContract };
 
-  export default MachineContract;
+  const Machine: MachineContract;
+
+  export default Machine;
 }
