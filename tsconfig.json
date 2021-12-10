@@ -4,7 +4,6 @@
     "skipLibCheck": true,
     "noUnusedParameters": false,
     "resolveJsonModule": true,
-    "outDir": "./build",
     "types": [
       "@types/node",
       "@adonisjs/core",
