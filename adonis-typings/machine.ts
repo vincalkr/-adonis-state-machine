@@ -23,11 +23,10 @@ declare module '@ioc:Adonis/Addons/StateMachine' {
     getStatus<T>(): StatusContract & T;
   }
 
-  export { MachineContract };
-
   const Machine: <T extends NormalizeConstructor<typeof BaseModel>>(
     superclass: T
   ) => new (...args: any[]) => MachineContract;
 
+  export { MachineContract };
   export default Machine;
 }

@@ -13,6 +13,8 @@ declare module '@ioc:Adonis/Addons/StateMachine/Status' {
     toString(): string;
   }
 
+  const Status: StatusContract;
+
   export { StatusContract };
-  export default StatusContract;
+  export default Status;
 }

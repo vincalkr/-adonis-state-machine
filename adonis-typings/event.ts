@@ -3,6 +3,8 @@ declare module '@ioc:Adonis/Addons/StateMachine/Event' {
     getData(): any;
   }
 
+  const Event: EventContract;
+
   export { EventContract };
-  export default EventContract;
+  export default Event;
 }
