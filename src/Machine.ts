@@ -1,10 +1,7 @@
 import { NormalizeConstructor } from '@ioc:Adonis/Core/Helpers';
-console.log('1');
 import { BaseModel } from '@ioc:Adonis/Lucid/Orm';
-console.log('2');
 import { join } from 'path';
 import { capitalize, isString } from 'lodash';
-console.log('3');
 import Status from './Status';
 import Event from './Event';
 import { ClassNotFound, StatusChangeEventFailed, TransitionNotAllowed } from './Exception';
