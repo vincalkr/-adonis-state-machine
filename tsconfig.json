@@ -10,4 +10,7 @@
       "@adonisjs/lucid",
     ]
   },
+  "files": [
+    "./adonis-typings/index.ts"
+  ]
 }

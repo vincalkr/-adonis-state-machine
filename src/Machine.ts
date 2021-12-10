@@ -3,7 +3,7 @@ console.log('1');
 import { BaseModel } from '@ioc:Adonis/Lucid/Orm';
 console.log('2');
 import { join } from 'path';
-import { types, string } from '@ioc:Adonis/Core/Helpers';
+import { capitalize, isString } from 'lodash';
 console.log('3');
 import Status from './Status';
 import Event from './Event';
@@ -158,9 +158,9 @@ const Machine = <T extends NormalizeConstructor<typeof BaseModel>>(superclass: T
         return new status();
       } catch (error) {
         throw new ClassNotFound(
-          `${string.capitalCase(id.toString())} (${`app/Models/Status/${
-            this.$namespace
-          }/${string.capitalCase(id.toString())}.ts`})`
+          `${capitalize(id.toString())} (${`app/Models/Status/${this.$namespace}/${capitalize(
+            id.toString()
+          )}.ts`})`
         );
       }
     }
@@ -185,7 +185,7 @@ const Machine = <T extends NormalizeConstructor<typeof BaseModel>>(superclass: T
         this[this.$attribute] = this.$initialState;
       }
 
-      if (types.isString(this[this.$attribute])) {
+      if (isString(this[this.$attribute])) {
         return this.setStatusObject(this.getStatusId());
       } else {
         return this[this.$attribute];
