@@ -1,7 +1,6 @@
 {
   "extends": "./node_modules/@adonisjs/mrm-preset/_tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
     "skipLibCheck": true,
     "noUnusedParameters": false,
     "resolveJsonModule": true,
