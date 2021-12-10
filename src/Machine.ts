@@ -1,4 +1,5 @@
 import { NormalizeConstructor } from '@ioc:Adonis/Core/Helpers';
+console.log('asdasd');
 import { BaseModel } from '@ioc:Adonis/Lucid/Orm';
 import { join } from 'path';
 import { types, string } from '@ioc:Adonis/Core/Helpers';
