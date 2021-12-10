@@ -11,5 +11,5 @@
       "@adonisjs/lucid",
     ]
   },
-  "include": ["./src/**/*", "./providers/**/*", "./adonis-typings/**/*", "./instructions.ts"],
+  "include": ["./src/**/*", "./providers/**/*", "./adonis-typings/**/*"],
 }
