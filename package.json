@@ -44,7 +44,7 @@
       "adonis5-state-machine"
     ]
   },
-  "dependencies": {
+  "devDependencies": {
     "@adonisjs/core": "^5.4.2",
     "@adonisjs/lucid": "^16.3.2",
     "@adonisjs/mrm-preset": "^4.1.2",
