@@ -52,10 +52,7 @@ class Status {
   }
 
   public toJSON() {
-    return JSON.stringify({
-      id: this._id,
-      label: this.label,
-    });
+    return this.id;
   }
 
   public toString() {
