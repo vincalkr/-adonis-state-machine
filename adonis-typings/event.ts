@@ -1,6 +1,6 @@
 declare module '@ioc:Adonis/Addons/StateMachine/Event' {
-  interface EventContract {
-    getData(): any;
+  interface EventContract<T = any> {
+    getData(): T;
   }
 
   const Event: new (data: any) => EventContract;
