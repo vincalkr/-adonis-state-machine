@@ -1,7 +1,7 @@
 class Event {
   public data: any;
 
-  constructor({ data }) {
+  constructor(data) {
     this.data = data;
   }
 
