@@ -8,8 +8,8 @@ declare module '@ioc:Adonis/Addons/StateMachine/Status' {
     getAvailableStatus(): [string, string][];
     getAvailableStatusObjects(): [string, StatusContract][];
     canChangeTo(id: string, event?: EventContract): boolean;
-    onEntry(id: string): boolean;
-    onExit(id: string): boolean;
+    onEntry(id: string, event?: EventContract): boolean;
+    onExit(id: string, event?: EventContract): boolean;
     toJSON(): string;
     toString(): string;
   }
