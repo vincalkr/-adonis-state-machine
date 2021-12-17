@@ -1,4 +1,5 @@
 declare module '@ioc:Adonis/Addons/StateMachine/Status' {
+  import { EventContract } from '@ioc:Adonis/Addons/StateMachine/Event';
   interface StatusContract {
     $id(): string;
     $label(): string;
@@ -6,7 +7,7 @@ declare module '@ioc:Adonis/Addons/StateMachine/Status' {
     label(): string;
     getAvailableStatus(): [string, string][];
     getAvailableStatusObjects(): [string, StatusContract][];
-    canChangeTo(): boolean;
+    canChangeTo(id: string, event?: EventContract): boolean;
     onEntry(id: string): boolean;
     onExit(id: string): boolean;
     toJSON(): string;
