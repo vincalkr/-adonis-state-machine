@@ -1,6 +1,7 @@
 declare module '@ioc:Adonis/Addons/StateMachine/Exception' {
-  const ClassNotFound: new () => Error;
-  const TransitionNotAllowed: new () => Error;
-  const StatusChangeEventFailed: new () => Error;
+  import { Exception } from '@adonisjs/core/build/standalone';
+  const ClassNotFound: new () => Exception;
+  const TransitionNotAllowed: new () => Exception;
+  const StatusChangeEventFailed: new () => Exception;
   export { ClassNotFound, TransitionNotAllowed, StatusChangeEventFailed };
 }
