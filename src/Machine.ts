@@ -1,6 +1,7 @@
-import { NormalizeConstructor, types, string } from '@ioc:Adonis/Core/Helpers';
+import { NormalizeConstructor } from '@ioc:Adonis/Core/Helpers';
 import { BaseModel } from '@ioc:Adonis/Lucid/Orm';
 import { join } from 'path';
+import { capitalize, isString } from 'lodash';
 import Status from './Status';
 import Event from './Event';
 import { ClassNotFound, StatusChangeEventFailed, TransitionNotAllowed } from './Exception';
@@ -149,16 +150,14 @@ const Machine = <T extends NormalizeConstructor<typeof BaseModel>>(superclass: T
       try {
         const status = require(`${join(
           process.cwd(),
-          `app/Models/Status/${this.$namespace}/${string
-            .capitalCase(id.toString())
-            .replace(' ', '')}.ts`
+          `app/Models/Status/${this.$namespace}/${capitalize(id.toString().replace('-', ''))}.ts`
         )}`).default;
         return new status();
       } catch (error) {
         throw new ClassNotFound(
-          `${string.capitalCase(id.toString()).replace(' ', '')} (${`app/Models/Status/${
-            this.$namespace
-          }/${string.capitalCase(id.toString()).replace(' ', '')}.ts`})`
+          `${capitalize(id.toString())} (${`app/Models/Status/${this.$namespace}/${capitalize(
+            id.toString().replace('-', '')
+          )}.ts`})`
         );
       }
     }
@@ -183,7 +182,7 @@ const Machine = <T extends NormalizeConstructor<typeof BaseModel>>(superclass: T
         this[this.$attribute] = this.$initialState;
       }
 
-      if (types.isString(this[this.$attribute])) {
+      if (isString(this[this.$attribute])) {
         return this.setStatusObject(this.getStatusId());
       } else {
         return this[this.$attribute];
