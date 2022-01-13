@@ -1,7 +1,7 @@
 import { NormalizeConstructor } from '@ioc:Adonis/Core/Helpers';
 import { BaseModel } from '@ioc:Adonis/Lucid/Orm';
 import { join } from 'path';
-import { capitalize, isString } from 'lodash';
+import { capitalize, isString, startCase } from 'lodash';
 import Status from './Status';
 import Event from './Event';
 import { ClassNotFound, StatusChangeEventFailed, TransitionNotAllowed } from './Exception';
@@ -150,14 +150,14 @@ const Machine = <T extends NormalizeConstructor<typeof BaseModel>>(superclass: T
       try {
         const status = require(`${join(
           process.cwd(),
-          `app/Models/Status/${this.$namespace}/${capitalize(id.toString().replace('-', ''))}.ts`
+          `app/Models/Status/${this.$namespace}/${startCase(id.toString()).replace(' ', '')}.ts`
         )}`).default;
         return new status();
       } catch (error) {
         throw new ClassNotFound(
-          `${capitalize(id.toString())} (${`app/Models/Status/${this.$namespace}/${capitalize(
-            id.toString().replace('-', '')
-          )}.ts`})`
+          `${capitalize(id.toString())} (${`app/Models/Status/${this.$namespace}/${startCase(
+            id.toString()
+          ).replace(' ', '')}.ts`})`
         );
       }
     }
